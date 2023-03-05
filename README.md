@@ -13,7 +13,7 @@ This project is for creating a Reddit bot that uses a ML model to automatically 
 4. Downloading youtube videos as mp3 with python: https://www.geeksforgeeks.org/download-video-in-mp3-format-using-pytube/
 5. For bandcamp, we need to automate the way Mike (flashback jack) does it: Go the bandcamp page for the track, inspect element, network section, click play on the bandcamp page, fetch the url request made to listen to the track (starts with https://t4.bcbits.com/), then save the audio file. We will get 128k mp3 files.
 
-### Dataset
+### Dataset
 
 1. Positive cases: Proper Techno spotify playlist -> https://open.spotify.com/playlist/0E6pf5W3NV7armcJYfNK3H?si=826f2122a6b843c8
 2. Negative cases: 
