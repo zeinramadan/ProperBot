@@ -11,7 +11,7 @@ This project is for creating a Reddit bot that uses a ML model to automatically 
 2. Using the API and making the bot: https://new.pythonforengineers.com/blog/build-a-reddit-bot-part-2-reply-to-posts/
 3. Automating the bot: https://new.pythonforengineers.com/blog/build-a-reddit-bot-part-3-automate-your-bot/
 4. Downloading youtube videos as mp3 with python: https://www.geeksforgeeks.org/download-video-in-mp3-format-using-pytube/
-5. For bandcamp, we need to automate the way Mike (flashback jack) does it: Go the bandcamp page for the track, inspect element, network section, click play on the bandcamp page, fetch the url request made to listen to the track (starts with https://t4.bcbits.com/), then save the audio file. We will get 128k mp3 files.
+5. For bandcamp, we need to automate the way flashback jack does it: Go the bandcamp page for the track, inspect element, network section, click play on the bandcamp page, fetch the url request made to listen to the track (starts with https://t4.bcbits.com/), then save the audio file. We will get 128k mp3 files.
 
 ### Dataset
 
