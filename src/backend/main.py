@@ -1,7 +1,6 @@
 from fastapi import FastAPI, HTTPException
-import os
 from models.YoutubeLink import YouTubeLink
-from services.predictor import predict  # Import the predict function
+from services.predictor import predict 
 
 app = FastAPI()
 
