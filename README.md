@@ -7,7 +7,7 @@ The main reason I built this is because I like being employed and I know compani
 
 So strap in, and enjoy the most entertaining README you've read all year. If you're a recruiter, and you're reading this, I hope this should be more than enough to convince you that I know how to code. No need to make me reverse a string or implement a linked list in a live coding interview for god's sake. If you came here from the subredddit, don't ever say we don't try to make the sub a better place. I've spent hours on this. It's still shit, but it's something. Anyways, enough (poorly written and unnecessarily vulgar) comedy. Let's actually get into the meat and potatoes.
 
-## Application
+## Application Overview
 
 The application is a simple website that uses an ML model to automatically assign a score to each track posted in the r/ProperTechno subreddit. The score describes how likely the track fits the vibe of proper techno. The frontend was built using React, the backend ML model wrapper was built using FastAPI, and the model was trained using scikit-learn. The model was trained using a custom dataset of 1000+ proper techno tracks (downloade thanks to the community spotify playlist and some clandestine libraries that can download tracks directly from streaming services) and 1000+ non-proper techno tracks which I collected from random Techno playlists on spotify that were obviously not 'Proper Techno'. It is a binary classification model that predicts whether a track is proper techno or not.
 
@@ -15,9 +15,15 @@ I plan to extend this in the future and create a Reddit bot that will automatica
 
 the first iteration of the ML model is using very simple features on the audio data, I will be adding more rich features and improving the model in the near future, but I've got a job and a jiu jitsu career that also needs my focus and attention. So it is what it is. 
 
-## Dataset
+## System Architecture Diagram
+Add system architecture diagram of Backend and frontend of website..
+
+## Dataset Details
 
 1. Positive cases: Proper Techno spotify playlist -> https://open.spotify.com/playlist/0E6pf5W3NV7armcJYfNK3H?si=826f2122a6b843c8
 2. Negative cases: 
     1. DARK /HARD TECHNO: https://open.spotify.com/playlist/1jjzhb9ublCl3X6ZZ6X9kK?si=3ea2988e0b1443e8
     2. ?
+
+## Installation
+TBC..
