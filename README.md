@@ -41,6 +41,64 @@ graph TD;
 
 </div>
 
+### FastAPI Backend
+Entry Point: The FastAPI application serves as the entry point for requests from the frontend. It exposes an endpoint /predict/ that accepts a YouTube link and returns a prediction score.
+
+### Predictor Service
+
+#### Functionality
+The predict function is the core of the prediction process. It checks if the track's features are already cached in the database. If not, it downloads the track, extracts features, and stores them in the database.
+
+#### Interactions
+- Database: It interacts with the database to check for cached features and to store new features.
+- Track Downloader: It uses the download_track function to download audio from a YouTube link.
+- Featurizer: It uses the extract_features function to process the downloaded audio and extract relevant features.
+- Model: It uses a pre-trained model to predict the score based on the extracted features.
+
+### Database Service
+
+#### Functionality
+This service handles all interactions with the PostgreSQL database. It initializes the database and provides functions to insert and retrieve track features.
+
+#### Interactions
+- Predictor Service: It is used by the predictor service to cache and retrieve track features.
+
+
+### Featurizer
+
+#### Functionality
+The extract_features function processes audio files to extract various audio features like MFCCs, chroma, spectral contrast, etc.
+
+#### Interactions
+- Predictor Service: It is called by the predictor service to extract features from downloaded audio tracks.
+
+
+### Track Downloader
+#### Functionality
+This component is responsible for downloading audio tracks from YouTube links. It is likely implemented in the download_track function, which is used by the predictor service.
+
+
+#### Overall Flow
+- Request Handling: The FastAPI backend receives a request with a YouTube link.
+
+- Prediction Process:
+    - The predictor service checks the database for cached features.
+    - If not cached, it downloads the track using the track downloader.
+
+It extracts features using the featurizer.
+    - It stores the features in the database.
+    - It predicts the score using the pre-trained model.
+
+- Response: The prediction score is returned to the frontend.
+
+This architecture design ensures efficient processing by caching features, so we don't have to rescore tracks that have already been scored, and modularizing the functionality into distinct services.
+
+### Future Work
+- Implement a Reddit bot that will automatically score the tracks posted in the subreddit in a comment under the post.
+- Add more rich features to the model to improve the score.
+- Deploy the app using streamlit so that it can be accessed by anyone.
+
+
 ## Dataset Details
 
 1. Positive cases: Proper Techno spotify playlist -> https://open.spotify.com/playlist/0E6pf5W3NV7armcJYfNK3H?si=826f2122a6b843c8
