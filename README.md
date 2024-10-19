@@ -18,6 +18,29 @@ the first iteration of the ML model is using very simple features on the audio d
 ## System Architecture Diagram
 Add system architecture diagram of Backend and frontend of website..
 
+For the website, I used a FastAPI backend and a React frontend, and a PostgreSQL database. The database is used to cache the features of submitted tracks so that we don't have to download the audio every time we want to score a track. The reddit bot implementation is TBD.
+
+Here is a diagram of the system architecture:
+
+<div align="center">
+
+```mermaid
+graph TD;
+    A[React Frontend] --> B[FastAPI Backend];
+    B --> C[PostgreSQL Database];
+    B --> D[Predictor Service];
+    B --> E[YouTubeLink Model];
+    B --> F[Featurizer];
+    B --> G[Track Downloader];
+    D --> C;
+    C --> D;
+    B --> A;
+    G --> F;
+    F --> D;
+```
+
+</div>
+
 ## Dataset Details
 
 1. Positive cases: Proper Techno spotify playlist -> https://open.spotify.com/playlist/0E6pf5W3NV7armcJYfNK3H?si=826f2122a6b843c8
