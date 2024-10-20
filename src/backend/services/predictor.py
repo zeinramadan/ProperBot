@@ -35,6 +35,16 @@ def extract_features(file_path):
 
 """
 TODO: understand the fingerprinting process using PyDejaVu or alternative fingerprinting library to implement caching by track fingerprint
+
+Caching logic:
+- when we get a track url, first we check if it's in the database by youtube URL
+- if youtube url is there, we grab the score from the track_cache table and return it
+- if we dont get a youtube url match from track_cache, we then check by fingerprint
+- if fingerprint is there, we grab the score from the track_cache table and return it
+- if we dont get a fingerprint match from track_cache, we download the track, extract features, score using the model, and save to the database
+
+To implement this we need to understand how the PyDejaVu database is structured and how to query it, and how we can link an entry in track_cache 
+to an entry in the PyDejaVu database (ie the fingerprint database)
 """
 def predict(url):
     try:
