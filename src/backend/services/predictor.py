@@ -25,13 +25,18 @@ def predict(url):
         # Check if the track is already in the database using the fingerprint
         cached_data = get_track_by_fingerprint(fingerprint)
         if cached_data:
-            # Use cached features and score
-            features, score = cached_data
+            print("Track already in database, using cached data")
+
+            # Get score from cached data to return to user
+            _, score = cached_data
+
         else:
+            print("Track not in database, scoring...")
+
             # Extract features
             features = extract_features(audio_path)
 
-            # Predict using the trained model
+            # Score using the trained model
             score = model.predict([features])[0]
 
             # Save features, fingerprint, and score to the database
