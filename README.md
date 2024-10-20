@@ -101,10 +101,12 @@ This architecture design ensures efficient processing by caching features, so we
 
 ## Dataset Details
 
-1. Positive cases: Proper Techno spotify playlist -> https://open.spotify.com/playlist/0E6pf5W3NV7armcJYfNK3H?si=826f2122a6b843c8
+1. Positive cases: Proper Techno spotify playlist -> https://open.spotify.com/playlist/0E6pf5W3NV7armcJYfNK3H?si=826f2122a6b843c8 (1680 downloaded tracks on 05/03/23)
 2. Negative cases: 
-    1. DARK /HARD TECHNO: https://open.spotify.com/playlist/1jjzhb9ublCl3X6ZZ6X9kK?si=3ea2988e0b1443e8
-    2. ?
+    - DARK /HARD TECHNO: https://open.spotify.com/playlist/1jjzhb9ublCl3X6ZZ6X9kK?si=3ea2988e0b1443e8 (517 total, 480 downloaded tracks)
+    - RAMMEN MET https://open.spotify.com/playlist/40sr5LCPiqKjlwY0d1DvSH?si=477f9136d8b040c5 (448 total, 432 downloaded tracks)
+    - https://open.spotify.com/playlist/0NniF8WNSTeACw0eKSjCxy?si=c088c0c084c4455f (473 total, y downloaded tracks)
+    - https://open.spotify.com/playlist/7bnISLKE70XyqclMAsgOyP?si=26a3e9de85dc4057 (244 total, z downloaded tracks)
 
 ## Installation
 TBC..
