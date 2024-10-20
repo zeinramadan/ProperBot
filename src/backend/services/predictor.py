@@ -1,10 +1,12 @@
 import os
 import pickle
-from services.featurizer import extract_features
-from services.track_downloader import download_track
 from datetime import datetime
-from services.database import initialize_db, insert_track, get_track_by_fingerprint, djv
-from dejavu.recognize import FileRecognizer
+import librosa
+import numpy as np
+
+from services.track_downloader import download_track
+from services.database import initialize_db, insert_track
+
 
 # Load the trained model
 with open('src/backend/resources/model.pkl', 'rb') as f:
@@ -13,34 +15,40 @@ with open('src/backend/resources/model.pkl', 'rb') as f:
 # Initialize the database
 initialize_db()
 
+
+# Function to extract features from the audio
+def extract_features(file_path):
+    y, sr = librosa.load(file_path)
+
+    # Extract features
+    mfccs = np.mean(librosa.feature.mfcc(y=y, sr=sr, n_mfcc=13).T, axis=0)
+    chroma = np.mean(librosa.feature.chroma_stft(y=y, sr=sr).T, axis=0)
+    spectral_contrast = np.mean(librosa.feature.spectral_contrast(y=y, sr=sr).T, axis=0)
+    zero_crossings = np.mean(librosa.feature.zero_crossing_rate(y))
+    spectral_bandwidth = np.mean(librosa.feature.spectral_bandwidth(y=y, sr=sr))
+    rms_energy = np.mean(librosa.feature.rms(y=y))
+
+    # Combine all features into a single array
+    features = np.hstack([mfccs, chroma, spectral_contrast, zero_crossings, spectral_bandwidth, rms_energy])
+    return features
+
+
+"""
+TODO: understand the fingerprinting process using PyDejaVu or alternative fingerprinting library to implement caching by track fingerprint
+"""
 def predict(url):
     try:
         # Download the audio from the YouTube link
         audio_path = download_track(url)
 
-        # Fingerprint the audio
-        djv.fingerprint_file(audio_path)
-        fingerprint = djv.recognize(FileRecognizer, audio_path)
+        # Extract features
+        features = extract_features(audio_path)
 
-        # Check if the track is already in the database using the fingerprint
-        cached_data = get_track_by_fingerprint(fingerprint)
-        if cached_data:
-            print("Track already in database, using cached data")
+        # Score using the trained model
+        score = model.predict([features])[0]
 
-            # Get score from cached data to return to user
-            _, score = cached_data
-
-        else:
-            print("Track not in database, scoring...")
-
-            # Extract features
-            features = extract_features(audio_path)
-
-            # Score using the trained model
-            score = model.predict([features])[0]
-
-            # Save features, fingerprint, and score to the database
-            insert_track(url, features, fingerprint, score, datetime.now().isoformat())
+        # Save features, and score to the database
+        insert_track(url, features, score, datetime.now().isoformat())
 
         # Cleanup downloaded audio
         os.remove(audio_path)
