@@ -111,5 +111,24 @@ This architecture design ensures efficient processing by caching features, so we
     - https://open.spotify.com/playlist/6hYusBiBM0YAbiv6SpAXQi?si=916387357850414c (185 total, - downloaded tracks)
     - https://open.spotify.com/playlist/6vMivq3dVG4PA8cP3r6ElD?si=80a79f2e54164ced (279 total, - downloaded tracks)
 
+The playlists were downloaded and stored on my hard drive. Further processing was carried out using python to ensure that there were no duplicate tracks between the playlists in the same category. In addition, I also made sure we had no tracks that were in the positive case playlist in the negative case playlists. 
+
+The matching was done using file metadata in a first pass which removed x amount of tracks. Then I used a audio fingerprinting to flag any potential escapees, which removed another y amount of tracks. 
+
+After the initial cleaning step, we are left with the following breakdown:
+
+
+| Class          | Number of Tracks | Downloaded Tracks | Average Track Length (min) | Unique Artists |
+|----------------|------------------|----------------|----------------------------|---------------|
+| Proper Techno  |                  | 150            |                            |               |
+| Dark/Hard Techno |               | 80            |                            |               |
+| Rammen Met     |                  | 70             |                            |     |
+| Playlist 3     |                  | 65             |                            |    |
+| Verknipt Hard Techno | 147        | 40             |                            |    |
+| Playlist 6     | -                | -              |                            | -             |
+| Playlist 7     | -                | -              |                            | -             |
+
+
+
 ## Installation
 TBC..
