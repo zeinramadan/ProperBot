@@ -105,8 +105,11 @@ This architecture design ensures efficient processing by caching features, so we
 2. Negative cases: 
     - DARK /HARD TECHNO: https://open.spotify.com/playlist/1jjzhb9ublCl3X6ZZ6X9kK?si=3ea2988e0b1443e8 (517 total, 480 downloaded tracks)
     - RAMMEN MET https://open.spotify.com/playlist/40sr5LCPiqKjlwY0d1DvSH?si=477f9136d8b040c5 (448 total, 432 downloaded tracks)
-    - https://open.spotify.com/playlist/0NniF8WNSTeACw0eKSjCxy?si=c088c0c084c4455f (473 total, y downloaded tracks)
-    - https://open.spotify.com/playlist/7bnISLKE70XyqclMAsgOyP?si=26a3e9de85dc4057 (244 total, z downloaded tracks)
+    - https://open.spotify.com/playlist/0NniF8WNSTeACw0eKSjCxy?si=c088c0c084c4455f (473 total, 421 downloaded tracks)
+    - https://open.spotify.com/playlist/7bnISLKE70XyqclMAsgOyP?si=26a3e9de85dc4057 (244 total, 231 downloaded tracks)
+    - Verknipt Hard Techno https://open.spotify.com/playlist/4k1vyKLTFNf8gIMPuFoGpm?si=e0bff84d3de448dd (148 total, 147 downloaded tracks)
+    - https://open.spotify.com/playlist/6hYusBiBM0YAbiv6SpAXQi?si=916387357850414c (185 total, - downloaded tracks)
+    - https://open.spotify.com/playlist/6vMivq3dVG4PA8cP3r6ElD?si=80a79f2e54164ced (279 total, - downloaded tracks)
 
 ## Installation
 TBC..
