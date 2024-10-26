@@ -101,6 +101,8 @@ This architecture design ensures efficient processing by caching features, so we
 
 ## Dataset Details
 
+To gather the data, I utilized the community spotify playlist for r/ProperTechno and then sourced some negative examples from a variety of other Techno playlists on spotify which seem to not be 'Proper Techno', falling more into the Dark/Hard Techno category, which is not Proper.
+
 1. Positive cases: Proper Techno spotify playlist -> https://open.spotify.com/playlist/0E6pf5W3NV7armcJYfNK3H?si=826f2122a6b843c8 (1680 downloaded tracks on 05/03/23)
 2. Negative cases: 
     - DARK /HARD TECHNO: https://open.spotify.com/playlist/1jjzhb9ublCl3X6ZZ6X9kK?si=3ea2988e0b1443e8 (517 total, 480 downloaded tracks)
