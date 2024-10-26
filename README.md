@@ -105,11 +105,11 @@ This architecture design ensures efficient processing by caching features, so we
 2. Negative cases: 
     - DARK /HARD TECHNO: https://open.spotify.com/playlist/1jjzhb9ublCl3X6ZZ6X9kK?si=3ea2988e0b1443e8 (517 total, 480 downloaded tracks)
     - RAMMEN MET https://open.spotify.com/playlist/40sr5LCPiqKjlwY0d1DvSH?si=477f9136d8b040c5 (448 total, 432 downloaded tracks)
-    - https://open.spotify.com/playlist/0NniF8WNSTeACw0eKSjCxy?si=c088c0c084c4455f (473 total, 421 downloaded tracks)
-    - https://open.spotify.com/playlist/7bnISLKE70XyqclMAsgOyP?si=26a3e9de85dc4057 (244 total, 231 downloaded tracks)
+    - TECHNO BEUKERS https://open.spotify.com/playlist/0NniF8WNSTeACw0eKSjCxy?si=c088c0c084c4455f (473 total, 421 downloaded tracks)
+    - TECHNO BEUKERS 2 https://open.spotify.com/playlist/7bnISLKE70XyqclMAsgOyP?si=26a3e9de85dc4057 (244 total, 231 downloaded tracks)
     - Verknipt Hard Techno https://open.spotify.com/playlist/4k1vyKLTFNf8gIMPuFoGpm?si=e0bff84d3de448dd (148 total, 147 downloaded tracks)
-    - https://open.spotify.com/playlist/6hYusBiBM0YAbiv6SpAXQi?si=916387357850414c (185 total, - downloaded tracks)
-    - https://open.spotify.com/playlist/6vMivq3dVG4PA8cP3r6ElD?si=80a79f2e54164ced (279 total, - downloaded tracks)
+    - HARD TECHNO RAVE 2024 https://open.spotify.com/playlist/6hYusBiBM0YAbiv6SpAXQi?si=916387357850414c (185 total, 180 downloaded tracks)
+    - GYM HARD TECHNO https://open.spotify.com/playlist/6vMivq3dVG4PA8cP3r6ElD?si=80a79f2e54164ced (279 total, 239 downloaded tracks)
 
 The playlists were downloaded and stored on my hard drive. Further processing was carried out using python to ensure that there were no duplicate tracks between the playlists in the same category. In addition, I also made sure we had no tracks that were in the positive case playlist in the negative case playlists. 
 
@@ -120,13 +120,13 @@ After the initial cleaning step, we are left with the following breakdown:
 
 | Class          | Number of Tracks | Downloaded Tracks | Average Track Length (min) | Unique Artists |
 |----------------|------------------|----------------|----------------------------|---------------|
-| Proper Techno  |                  | 150            |                            |               |
-| Dark/Hard Techno |               | 80            |                            |               |
-| Rammen Met     |                  | 70             |                            |     |
-| Playlist 3     |                  | 65             |                            |    |
-| Verknipt Hard Techno | 147        | 40             |                            |    |
-| Playlist 6     | -                | -              |                            | -             |
-| Playlist 7     | -                | -              |                            | -             |
+| Proper Techno  |  1680 (5th March 2023)| 1680      |                            |               |
+| Dark/Hard Techno | 517               | 480             |                            |                |
+| Rammen Met     |     448             | 432             |                            |               |
+| Techno Beukers     |  473               | 421             |                            |               |
+| Techno Beukers 2 | 244        | 231             |                            |               |
+| Hard Techno Rave 2024 |  185              | 180              |                            | -             |
+| Gym Hard Techno     | 279              | 239              |                            | -             |
 
 
 
