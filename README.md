@@ -118,15 +118,15 @@ The matching was done using file metadata in a first pass which removed x amount
 After the initial cleaning step, we are left with the following breakdown:
 
 
-| Class          | Number of Tracks | Downloaded Tracks | Average Track Length (min) | Unique Artists |
-|----------------|------------------|----------------|----------------------------|---------------|
-| Proper Techno  |  1680 (5th March 2023)| 1680      |                            |               |
-| Dark/Hard Techno | 517               | 480             |                            |                |
-| Rammen Met     |     448             | 432             |                            |               |
-| Techno Beukers     |  473               | 421             |                            |               |
-| Techno Beukers 2 | 244        | 231             |                            |               |
-| Hard Techno Rave 2024 |  185              | 180              |                            | -             |
-| Gym Hard Techno     | 279              | 239              |                            | -             |
+| Class          | Playlist       | Number of Tracks | Downloaded Tracks | Average Track Length (min) | Unique Artists |
+|----------------|----------------|------------------|----------------|----------------------------|---------------|
+| Proper Techno  | r/ProperTechno  |  1680 (5th March 2023)| 1680      |                            |               |
+| Not Proper  | Dark/Hard Techno | 517               | 480             |                            |                |
+| Not Proper  | Rammen Met     |     448             | 432             |                            |               |
+| Not Proper  | Techno Beukers     |  473               | 421             |                            |               |
+| Not Proper  | Techno Beukers 2 | 244        | 231             |                            |               |
+| Not Proper  | Hard Techno Rave 2024 |  185              | 180              |                            | -             |
+| Not Proper  | Gym Hard Techno     | 279              | 239              |                            | -             |
 
 
 
